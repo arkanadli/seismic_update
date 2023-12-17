@@ -5,7 +5,7 @@ import 'package:seismic_update/features/gempa/domain/entities/gempa_entity.dart'
 import 'package:seismic_update/features/gempa/domain/repositories/gempa_repository.dart';
 
 class GetDataGempa extends UsecaseWithoutParams<List<GempaEntity>> {
-  final GempatRepository _repository;
+  final GempaRepository _repository;
 
   GetDataGempa(this._repository);
 
