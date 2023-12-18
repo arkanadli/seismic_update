@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "885843769822",
+    "project_id": "seismic-update",
+    "storage_bucket": "seismic-update.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885843769822:android:442561dcca758a710e454f",
+        "android_client_info": {
+          "package_name": "com.example.seismic_update"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkmWeWN5jAQHTk-sZDQzw6yioLeMvaGfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

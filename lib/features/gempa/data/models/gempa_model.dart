@@ -22,4 +22,4 @@ class GempaModel extends GempaEntity {
       _$GempaModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$GempaModelToJson(this);
-}
+} 

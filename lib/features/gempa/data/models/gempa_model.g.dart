@@ -7,28 +7,28 @@ part of 'gempa_model.dart';
 // **************************************************************************
 
 GempaModel _$GempaModelFromJson(Map<String, dynamic> json) => GempaModel(
-      tanggal: json['Tanggal'] as String,
-      jam: json['Jam'] as String,
-      dateTime: DateTime.parse(json['DateTime'] as String),
-      coordinates: json['Coordinates'] as String,
-      lintang: json['Lintang'] as String,
-      bujur: json['Bujur'] as String,
-      magnitude: json['Magnitude'] as String,
-      kedalaman: json['Kedalaman'] as String,
-      wilayah: json['Wilayah'] as String,
-      potensi: json['Potensi'] as String,
+      tanggal: json['tanggal'] as String,
+      jam: json['jam'] as String,
+      dateTime: DateTime.parse(json['dateTime'] as String),
+      coordinates: json['coordinates'] as String,
+      lintang: json['lintang'] as String,
+      bujur: json['bujur'] as String,
+      magnitude: json['magnitude'] as String,
+      kedalaman: json['kedalaman'] as String,
+      wilayah: json['wilayah'] as String,
+      potensi: json['potensi'] as String,
     );
 
 Map<String, dynamic> _$GempaModelToJson(GempaModel instance) =>
     <String, dynamic>{
-      'Tanggal': instance.tanggal,
-      'Jam': instance.jam,
-      'DateTime': instance.dateTime.toIso8601String(),
-      'Coordinates': instance.coordinates,
-      'Lintang': instance.lintang,
-      'Bujur': instance.bujur,
-      'Magnitude': instance.magnitude,
-      'Kedalaman': instance.kedalaman,
-      'Wilayah': instance.wilayah,
-      'Potensi': instance.potensi,
+      'tanggal': instance.tanggal,
+      'jam': instance.jam,
+      'dateTime': instance.dateTime.toIso8601String(),
+      'coordinates': instance.coordinates,
+      'lintang': instance.lintang,
+      'bujur': instance.bujur,
+      'magnitude': instance.magnitude,
+      'kedalaman': instance.kedalaman,
+      'wilayah': instance.wilayah,
+      'potensi': instance.potensi,
     };

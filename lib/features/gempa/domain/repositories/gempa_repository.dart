@@ -6,4 +6,7 @@ abstract class GempaRepository {
   GempaRepository();
 
   Future<Either<Failure, List<GempaEntity>>> getDataGempa();
+
+  
 }
+

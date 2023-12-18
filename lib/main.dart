@@ -1,12 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:seismic_update/core/services/injection_container.dart';
 import 'package:seismic_update/features/gempa/presentation/cubit/gempa_cubit.dart';
-import 'package:seismic_update/features/gempa/presentation/views/home.dart';
+import 'package:seismic_update/firebase_options.dart';
 import 'package:seismic_update/navigation_bar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initializeDependencies();
   runApp(const MyApp());
 }

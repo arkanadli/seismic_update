@@ -10,7 +10,7 @@ class GetDataGempa extends UsecaseWithoutParams<List<GempaEntity>> {
   GetDataGempa(this._repository);
 
   @override
-  Future<Either<Failure, List<GempaEntity>>> call() {
-    return _repository.getDataGempa();
+  Future<Either<Failure, List<GempaEntity>>> call() async {
+    return await _repository.getDataGempa();
   }
 }
