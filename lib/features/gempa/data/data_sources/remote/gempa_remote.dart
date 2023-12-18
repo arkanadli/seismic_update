@@ -21,7 +21,7 @@ class GempaRemoteDataSourceImpl extends GempaRemoteDataSource {
 
       if (response.statusCode == 200 || response.statusCode == 201) {
         final decodedJson =
-            jsonDecode(response.body)['Infogempa']['gempa'] as List<dynamic>;
+            jsonDecode(response.body)['Infogempa']['gempa'] as List;
 
         final List<GempaModel> dataGempa =
             decodedJson.map((e) => GempaModel.fromJson(e)).toList();
