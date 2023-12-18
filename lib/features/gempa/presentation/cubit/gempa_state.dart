@@ -21,7 +21,7 @@ class DataGempaLoaded extends GempaState {
 
   @override
   // TODO: implement props
-  List<Object?> get props => [List<GempaEntity>];
+  List<Object?> get props => [dataGempa];
 }
 
 class GempaError extends GempaState {

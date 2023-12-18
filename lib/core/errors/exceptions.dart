@@ -9,7 +9,3 @@ class ApiException extends Equatable implements Exception {
   // TODO: implement props
   List<Object?> get props => [message, statusCode];
 }
-
-class FirebaseException extends Equatable implements Exception {
-  final String message;
-}
