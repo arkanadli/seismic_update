@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
   Center screenDataLoading() {
     return const Center(
       child: Column(
-        children: [],
+        children: [CircularProgressIndicator()],
       ),
     );
   }
