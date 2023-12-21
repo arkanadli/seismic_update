@@ -8,14 +8,14 @@ import 'package:seismic_update/features/gempa/presentation/cubit/gempa_state.dar
 
 import '../widgets/card_data_gempa.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class GempaScreen extends StatefulWidget {
+  const GempaScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<GempaScreen> createState() => _GempaScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _GempaScreenState extends State<GempaScreen> {
   bool startAnimation = false;
 
   Future<void> getGempaData() async {

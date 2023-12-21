@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:seismic_update/features/gempa/presentation/views/home.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:seismic_update/features/kontak/presentation/views/kontak.dart';
 
 class NavigationBarScreen extends StatefulWidget {
   const NavigationBarScreen({Key? key}) : super(key: key);
@@ -29,14 +30,14 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
           /// Home
           SalomonBottomBarItem(
             icon: const Icon(Icons.home),
-            title: const Text("Home"),
+            title: const Text("Seismic"),
             selectedColor: Colors.purple,
           ),
 
           /// Likes
           SalomonBottomBarItem(
             icon: const Icon(Icons.favorite_border),
-            title: const Text("Likes"),
+            title: const Text("Contacts"),
             selectedColor: Colors.pink,
           ),
 
@@ -58,8 +59,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
       body: IndexedStack(
         index: currentPage,
         children: const [
-          HomePage(),
-          Text('asdasdasd'),
+          GempaScreen(),
+          KontakScreen(),
           Text('asdasd324'),
           Text('asdasd1sda'),
         ],
