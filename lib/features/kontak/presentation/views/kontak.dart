@@ -328,19 +328,25 @@ class _KontakScreenState extends State<KontakScreen> {
 
   Container floatingButton() {
     return Container(
-      transform: Matrix4.translationValues(-15, -15, 0),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40), color: Colors.green[400]),
-      child: IconButton(
-        color: Colors.black,
-        onPressed: () {
-          openCreateBox();
-        },
-        icon: const Icon(
-          Iconsax.add,
-          size: 40,
-        ),
-      ),
-    );
+        transform: Matrix4.translationValues(-15, -15, 0),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(40), color: Colors.green[300]),
+        child: GestureDetector(
+          onTap: () {
+            openCreateBox();
+          },
+          child: const SizedBox(
+            width: 120,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Row(
+                children: [
+                  Text('Tambah'),
+                  Icon(Icons.add),
+                ],
+              ),
+            ),
+          ),
+        ));
   }
 }

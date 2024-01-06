@@ -1,10 +1,12 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:seismic_update/features/gempa/presentation/views/home.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:seismic_update/features/kontak/presentation/views/kontak.dart';
+import 'package:seismic_update/features/profile/presentation/views/profile.dart';
 
 class NavigationBarScreen extends StatefulWidget {
   const NavigationBarScreen({Key? key}) : super(key: key);
@@ -19,6 +21,31 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Seismic Update",
+          style: TextStyle(
+            fontSize: 24,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.green,
+        scrolledUnderElevation: 0,
+        actions: [
+          SizedBox(
+            width: 50,
+            child: GestureDetector(
+              onTap: () {
+                FirebaseAuth.instance.signOut();
+              },
+              child: const Icon(
+                Icons.logout_outlined,
+                color: Colors.white,
+              ),
+            ),
+          )
+        ],
+      ),
       bottomNavigationBar: SalomonBottomBar(
         itemPadding: const EdgeInsets.all(18),
         currentIndex: currentPage,
@@ -29,22 +56,15 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
         items: [
           /// Home
           SalomonBottomBarItem(
-            icon: const Icon(Icons.home),
+            icon: const Icon(Icons.monitor_heart_outlined),
             title: const Text("Seismic"),
-            selectedColor: Colors.purple,
+            selectedColor: Colors.green,
           ),
 
           /// Likes
           SalomonBottomBarItem(
-            icon: const Icon(Icons.favorite_border),
+            icon: const Icon(Icons.contact_phone_outlined),
             title: const Text("Contacts"),
-            selectedColor: Colors.pink,
-          ),
-
-          /// Search
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.search),
-            title: const Text("Search"),
             selectedColor: Colors.orange,
           ),
 
@@ -61,8 +81,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
         children: const [
           GempaScreen(),
           KontakScreen(),
-          Text('asdasd324'),
-          Text('asdasd1sda'),
+          ProfileScreen(),
         ],
       ),
     );

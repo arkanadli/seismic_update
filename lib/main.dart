@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:seismic_update/core/services/injection_container.dart';
+import 'package:seismic_update/features/auth/auth_check.dart';
 import 'package:seismic_update/features/gempa/presentation/cubit/gempa_cubit.dart';
 import 'package:seismic_update/firebase_options.dart';
 import 'package:seismic_update/navigation_bar.dart';
@@ -29,10 +30,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Seismic Update',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
+          fontFamily: 'Montserrat',
           useMaterial3: true,
         ),
-        home: const NavigationBarScreen(),
+        home: const AuthStateCheck(),
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
@@ -32,18 +33,7 @@ class _GempaScreenState extends State<GempaScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.green[200],
-      appBar: AppBar(
-        title: const Text(
-          "Seismic Update",
-          style: TextStyle(
-            fontSize: 24,
-            color: Colors.white,
-          ),
-        ),
-        backgroundColor: Colors.green,
-        scrolledUnderElevation: 0,
-        actions: const [],
-      ),
+      
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(0.0),
@@ -63,7 +53,7 @@ class _GempaScreenState extends State<GempaScreen> {
                     : state is DataGempaLoaded
                         ? screenDataLoaded(context, state)
                         : screenFetchError(context);
-              })
+              }),
             ],
           ),
         ),
@@ -95,7 +85,7 @@ class _GempaScreenState extends State<GempaScreen> {
 
   SizedBox screenDataLoaded(BuildContext context, DataGempaLoaded state) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height,
+      height: MediaQuery.of(context).size.height - 140,
       child: LiquidPullToRefresh(
         backgroundColor: Colors.white,
         color: Colors.green,

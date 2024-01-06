@@ -14,31 +14,82 @@ class CardDataGempa extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(0),
       margin: const EdgeInsets.only(
-        bottom: 10.0,
+        bottom: 16.0,
       ),
       child: Card(
         color: const Color.fromARGB(255, 229, 240, 166),
-        shadowColor: Colors.red,
         elevation: 4,
-        shape: const RoundedRectangleBorder(),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+          side: const BorderSide(color: Colors.green, width: 2.0),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Wilayah : ${gempa.wilayah}",
+                "Wilayah: ${gempa.wilayah}",
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Text(
-                "Magnitude : ${gempa.magnitude}",
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  const Icon(Icons.monitor_heart_outlined, color: Colors.red),
+                  const SizedBox(width: 8),
+                  Text(
+                    "Magnitude: ${gempa.magnitude}",
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
               ),
-              Text("Kedalaman : ${gempa.kedalaman}"),
-              Text(
-                "Jam : ${gempa.jam}",
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  const Icon(Icons.landscape_sharp, color: Colors.green),
+                  const SizedBox(width: 8),
+                  Text(
+                    "Kedalaman: ${gempa.kedalaman}",
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.green,
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                "Tanggal : ${gempa.tanggal}",
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  const Icon(Icons.access_time, color: Colors.orange),
+                  const SizedBox(width: 8),
+                  Text(
+                    "Jam: ${gempa.jam}",
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.orange,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  const Icon(Icons.date_range, color: Colors.purple),
+                  const SizedBox(width: 8),
+                  Text(
+                    "Tanggal: ${gempa.tanggal}",
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.purple,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

@@ -23,6 +23,7 @@ dependencies:
   liquid_pull_to_refresh: ^3.0.1
   firebase_core: ^2.24.2
   cloud_firestore: ^4.13.6
+  firebase_auth: ^4.16.0
 
 dev_dependencies:
   flutter_test:
@@ -35,3 +36,16 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+  assets : 
+    - assets/images/
+  
+  fonts:
+    - family : Montserrat
+      fonts :
+        - asset : assets/fonts/Montserrat-Light.ttf
+          weight : 200
+        - asset : assets/fonts/Montserrat-Regular.ttf
+          weight : 400
+        - asset : assets/fonts/Montserrat-SemiBold.ttf
+          weight : 600
+      
