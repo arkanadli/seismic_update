@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seismic_update/features/profile/presentation/widgets/card_profile.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -44,19 +45,11 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16),
-                Text(
-                  'Name: Muhammad Arkan Adli',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
-                ),
-                SizedBox(height: 8),
-                Text(
-                  'NRP: 15202168',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
-                ),
+                CardProfile(
+                    nama: "Muhammad Arkan Adli",
+                    umur: "20",
+                    nrp: '152021168',
+                    imgUrl: 'assets/images/fotoarkan.png')
               ],
             ),
           ),

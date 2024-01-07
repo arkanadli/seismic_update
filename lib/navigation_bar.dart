@@ -29,7 +29,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.green,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         scrolledUnderElevation: 0,
         actions: [
           SizedBox(

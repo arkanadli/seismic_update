@@ -32,8 +32,7 @@ class _GempaScreenState extends State<GempaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[200],
-      
+      backgroundColor: Colors.green[100],
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(0.0),

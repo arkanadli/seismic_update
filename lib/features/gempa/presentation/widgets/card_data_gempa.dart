@@ -21,7 +21,8 @@ class CardDataGempa extends StatelessWidget {
         elevation: 4,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
-          side: const BorderSide(color: Colors.green, width: 2.0),
+          side: BorderSide(
+              color: Theme.of(context).colorScheme.primary, width: 2.0),
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -43,9 +44,9 @@ class CardDataGempa extends StatelessWidget {
                   Text(
                     "Magnitude: ${gempa.magnitude}",
                     style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.blue,
-                    ),
+                        fontSize: 16,
+                        color: Colors.red,
+                        fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -57,9 +58,9 @@ class CardDataGempa extends StatelessWidget {
                   Text(
                     "Kedalaman: ${gempa.kedalaman}",
                     style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.green,
-                    ),
+                        fontSize: 16,
+                        color: Colors.green,
+                        fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -71,9 +72,9 @@ class CardDataGempa extends StatelessWidget {
                   Text(
                     "Jam: ${gempa.jam}",
                     style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.orange,
-                    ),
+                        fontSize: 16,
+                        color: Colors.orange,
+                        fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -85,9 +86,9 @@ class CardDataGempa extends StatelessWidget {
                   Text(
                     "Tanggal: ${gempa.tanggal}",
                     style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.purple,
-                    ),
+                        fontSize: 16,
+                        color: Colors.purple,
+                        fontWeight: FontWeight.w600),
                   ),
                 ],
               ),

@@ -129,7 +129,7 @@ class _KontakScreenState extends State<KontakScreen> {
       builder: (context) {
         return AlertDialog(
           title: const Text('Konfirmasi Delete'),
-          content: const Text('Apakah kamu yakin ingin menghapus data ini?'),
+          content: const Text('Apakah kamu yakin ingin menghapus kontak ini?'),
           actions: [
             TextButton(
               onPressed: () {
@@ -238,7 +238,7 @@ class _KontakScreenState extends State<KontakScreen> {
                   keteranganTeksController.text = '';
                   Navigator.of(context).pop();
                 },
-                child: const Text('Add Notes'))
+                child: const Text('Tambah Kontak'))
           ],
         );
       },
@@ -248,6 +248,7 @@ class _KontakScreenState extends State<KontakScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green[100],
       floatingActionButton: floatingButton(),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -298,24 +299,27 @@ class _KontakScreenState extends State<KontakScreen> {
         itemCount: listData.length,
         itemBuilder: (context, index) {
           final dataKontak = listData[index];
-          return Card(
-            child: GestureDetector(
-              onTap: () => openEditBox(dataKontak),
-              child: ListTile(
-                leading: const CircleAvatar(
-                  backgroundImage: NetworkImage(
-                    "https://i.ibb.co/PGv8ZzG/me.jpg",
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 1),
+            child: Card(
+              child: GestureDetector(
+                onTap: () => openEditBox(dataKontak),
+                child: ListTile(
+                  leading: const CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://i.ibb.co/PGv8ZzG/me.jpg",
+                    ),
                   ),
-                ),
-                title: Text('${dataKontak.nama} (${dataKontak.keterangan})'),
-                subtitle: Text(dataKontak.nomorHp),
-                trailing: IconButton(
-                  onPressed: () {
-                    openDeleteConfirm(dataKontak.id);
-                  },
-                  icon: const Icon(
-                    Icons.delete,
-                    size: 24.0,
+                  title: Text('${dataKontak.nama} (${dataKontak.keterangan})'),
+                  subtitle: Text(dataKontak.nomorHp),
+                  trailing: IconButton(
+                    onPressed: () {
+                      openDeleteConfirm(dataKontak.id);
+                    },
+                    icon: const Icon(
+                      Icons.delete,
+                      size: 24.0,
+                    ),
                   ),
                 ),
               ),
@@ -336,7 +340,7 @@ class _KontakScreenState extends State<KontakScreen> {
             openCreateBox();
           },
           child: const SizedBox(
-            width: 120,
+            width: 124,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Row(

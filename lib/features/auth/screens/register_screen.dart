@@ -149,8 +149,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   height: 75,
                 ),
                 const Text(
-                  'Register Account',
-                  style: TextStyle(fontSize: 44),
+                  'REGISTER MEMBER',
+                  style: TextStyle(fontSize: 34),
                 ),
                 const SizedBox(
                   height: 20,
